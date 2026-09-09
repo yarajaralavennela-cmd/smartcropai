@@ -11,8 +11,8 @@ app = FastAPI(title="SmartCrop AI")
 # ============================================================
 # MODEL CONFIGURATION
 # ============================================================
-
-MODEL_PATH = r"C:\Users\unuku\OneDrive\Documents\smartcropai\dataset\PlantDoc\PlantDoc-Dataset-windows-compatible-master\runs\classify\train-3\weights\best.pt"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "..", "model", "best.pt")
 MODEL_IMAGE_SIZE = 224
 
 if not os.path.exists(MODEL_PATH):
